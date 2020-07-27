@@ -205,8 +205,8 @@ public abstract class ClientListener extends Service implements OnRecordPosition
 		}
 
 	 };
-	 
-	 
+
+
 	public final BroadcastReceiver ConnectivityCheckReceiver = new BroadcastReceiver() {
 		
 		private String TAG = "ConnectivityReceiver";

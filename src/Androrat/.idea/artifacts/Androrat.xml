@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="apk" build-on-make="true" name="Androrat">
+    <output-path>$PROJECT_DIR$/out/artifacts/Androrat</output-path>
+    <properties id="android-properties">
+      <options>
+        <option name="keyAlias" value="keval123" />
+        <option name="keyPassword" value="a2V2YWwxMjM=" />
+        <option name="keyStorePassword" value="a2V2YWwxMjM=" />
+        <option name="keyStoreUrl" value="file://$PROJECT_DIR$/../../cxv.jks" />
+        <option name="proGuardCfgFiles">
+          <list>
+            <option value="file://$APPLICATION_HOME_DIR$/jbr/tools/proguard/proguard-android.txt" />
+          </list>
+        </option>
+        <option name="signingMode" value="DEBUG" />
+      </options>
+    </properties>
+    <root id="archive" name="Androrat.apk">
+      <element id="android-final-package" facet="Androrat/android/Android" />
+    </root>
+  </artifact>
+</component>

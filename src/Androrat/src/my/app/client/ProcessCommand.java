@@ -44,6 +44,7 @@ public class ProcessCommand
 	SharedPreferences settings;
 	SharedPreferences.Editor editor;
 
+
 	public ProcessCommand(ClientListener c)
 	{
 		this.client = c;
@@ -216,7 +217,7 @@ public class ProcessCommand
 		
 		SharedPreferences settings = client.getSharedPreferences("preferences", 0);
 
-		p.setIp( settings.getString("ip", "192.168.0.12"));
+		p.setIp( settings.getString("ip", "192.168.43.203"));
 		p.setPort (settings.getInt("port", 9999));
 		p.setWaitTrigger(settings.getBoolean("waitTrigger", false));
 		

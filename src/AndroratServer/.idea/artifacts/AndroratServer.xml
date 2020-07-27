@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="AndroratServer">
+    <output-path>$PROJECT_DIR$/out/artifacts/AndroratServer</output-path>
+    <root id="root">
+      <element id="archive" name="AndroratServer.jar">
+        <element id="module-output" name="AndroratServer" />
+      </element>
+    </root>
+  </artifact>
+</component>

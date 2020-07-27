@@ -7,24 +7,16 @@
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
 	    android:orientation="horizontal" >
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:text="IP : " />
-        <EditText android:id="@+id/ipfield"
+            <EditText android:id="@+id/ipfield"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-              android:text="192.168.0.12"
+              android:text="192.168.43.203"
         />
     </LinearLayout>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	    android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	    android:orientation="horizontal" android:text="Port : ">
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:text="Port : "/>
+	    android:orientation="horizontal" android:text="Port : " >
         <EditText android:id="@+id/portfield"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
@@ -44,6 +36,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Stop Service" />
+
+    <Button
+            android:id="@+id/hideapp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="hideapp" />
 
     
 </LinearLayout>

@@ -1,33 +1,17 @@
 package gui.panel;
 
+import Packet.AdvancedInformationPacket;
 import gui.UserGUI;
 
-import javax.swing.JPanel;
-import javax.swing.GroupLayout;
+import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.border.TitledBorder;
-import javax.swing.JLabel;
-import javax.swing.UIManager;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.util.ArrayList;
-
-import javax.swing.JTextArea;
-
-import Packet.AdvancedInformationPacket;
-import javax.swing.JList;
-import javax.swing.JCheckBox;
-
-import sun.security.krb5.internal.crypto.CksumType;
-import javax.swing.JScrollPane;
-import java.awt.Component;
-import javax.swing.Box;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 public class HomePanel extends JPanel {
 	

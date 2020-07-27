@@ -63,8 +63,11 @@ public class Client extends ClientListener implements Controler {
 		
 		loadPreferences();
 	}
-	
+
+	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {
+		super.onStartCommand(intent, flags, startId);
+
 		//toast = Toast.makeText(this	,"Prepare to laod", Toast.LENGTH_LONG);
 		//loadPreferences("preferences");
 		//Intent i = new Intent(this,Preferences.class);
@@ -179,12 +182,6 @@ public class Client extends ClientListener implements Controler {
 	
 	public void reconnectionAttempts() 
 	{
-		/*
-		 * 10 fois toute les minutes
-		 * 5 fois toutes les 5 minutes
-		 * 3 fois toute les 10 minutes
-		 * 1 fois au bout de 30 minutes
-		 */
 		if(!isConnected)
 			return;
 		
@@ -246,7 +243,6 @@ public class Client extends ClientListener implements Controler {
 	public void onDestroy() {
 		//savePreferences("myPref");
 		//savePreferences("preferences");
-		
 		Log.i(TAG, "in onDestroy");
 		unregisterReceiver(ConnectivityCheckReceiver);
 		conn.stop();
@@ -254,6 +250,13 @@ public class Client extends ClientListener implements Controler {
 		stopSelf();
 		super.onDestroy();
 	}
+
+//	@Override
+//	public void onDestroy() {
+//		super.onDestroy();
+//		Intent restartService = new Intent("RestartService");
+//		sendBroadcast(restartService);
+//	}
 	
 	public void resetConnectionAttempts() {
 		nbAttempts = 10;
